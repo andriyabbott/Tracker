@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Weight Loss Plan — Quick Reference</title>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
   :root {
     --black: #0d0d0d;
@@ -18,390 +18,390 @@
     --rule: #d0c9b8;
   }
 
-- { margin: 0; padding: 0; box-sizing: border-box; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-@page {
-size: A4;
-margin: 0;
-}
+  @page {
+    size: A4;
+    margin: 0;
+  }
 
-body {
-font-family: ‘Barlow’, sans-serif;
-background: var(–white);
-color: var(–black);
-width: 210mm;
-min-height: 297mm;
-margin: 0 auto;
-padding: 10mm 10mm 8mm;
-font-size: 8pt;
-line-height: 1.35;
-}
+  body {
+    font-family: Arial, sans-serif;
+    background: var(--white);
+    color: var(--black);
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    padding: 10mm 10mm 8mm;
+    font-size: 8pt;
+    line-height: 1.35;
+  }
 
-/* ── HEADER ── */
-.header {
-display: flex;
-justify-content: space-between;
-align-items: flex-end;
-border-bottom: 3px solid var(–black);
-padding-bottom: 4px;
-margin-bottom: 7px;
-}
+  /* ── HEADER ── */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 3px solid var(--black);
+    padding-bottom: 4px;
+    margin-bottom: 7px;
+  }
 
-.header-left h1 {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-weight: 900;
-font-size: 26pt;
-line-height: 1;
-text-transform: uppercase;
-letter-spacing: -0.5px;
-}
+  .header-left h1 {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 26pt;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+  }
 
-.header-left h1 span {
-color: var(–red);
-}
+  .header-left h1 span {
+    color: var(--red);
+  }
 
-.header-left .sub {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-size: 10pt;
-font-weight: 600;
-letter-spacing: 2px;
-text-transform: uppercase;
-color: var(–mid);
-margin-top: 1px;
-}
+  .header-left .sub {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-size: 10pt;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--mid);
+    margin-top: 1px;
+  }
 
-.header-right {
-text-align: right;
-padding-bottom: 2px;
-}
+  .header-right {
+    text-align: right;
+    padding-bottom: 2px;
+  }
 
-.stat-pill {
-display: inline-block;
-background: var(–black);
-color: var(–white);
-font-family: ‘Barlow Condensed’, sans-serif;
-font-weight: 700;
-font-size: 9pt;
-padding: 2px 7px;
-margin-left: 3px;
-letter-spacing: 0.5px;
-}
+  .stat-pill {
+    display: inline-block;
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 9pt;
+    padding: 2px 7px;
+    margin-left: 3px;
+    letter-spacing: 0.5px;
+  }
 
-.stat-pill.red { background: var(–red); }
-.stat-pill.green { background: var(–green); }
-.stat-pill.blue { background: var(–blue); }
+  .stat-pill.red { background: var(--red); }
+  .stat-pill.green { background: var(--green); }
+  .stat-pill.blue { background: var(--blue); }
 
-/* ── GRID ── */
-.grid {
-display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-gap: 6px;
-}
+  /* ── GRID ── */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6px;
+  }
 
-.col-span-2 { grid-column: span 2; }
+  .col-span-2 { grid-column: span 2; }
 
-/* ── CARD ── */
-.card {
-border: 1.5px solid var(–black);
-padding: 6px 7px 5px;
-position: relative;
-}
+  /* ── CARD ── */
+  .card {
+    border: 1.5px solid var(--black);
+    padding: 6px 7px 5px;
+    position: relative;
+  }
 
-.card-title {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-weight: 900;
-font-size: 8pt;
-text-transform: uppercase;
-letter-spacing: 1.5px;
-background: var(–black);
-color: var(–white);
-display: inline-block;
-padding: 1px 6px;
-margin-bottom: 5px;
-margin-left: -7px;
-}
+  .card-title {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 8pt;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    background: var(--black);
+    color: var(--white);
+    display: inline-block;
+    padding: 1px 6px;
+    margin-bottom: 5px;
+    margin-left: -7px;
+  }
 
-.card-title.red { background: var(–red); }
-.card-title.green { background: var(–green); }
-.card-title.blue { background: var(–blue); }
-.card-title.amber { background: var(–amber); color: var(–black); }
+  .card-title.red { background: var(--red); }
+  .card-title.green { background: var(--green); }
+  .card-title.blue { background: var(--blue); }
+  .card-title.amber { background: var(--amber); color: var(--black); }
 
-/* ── NUMBERS BLOCK ── */
-.nums {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 3px 8px;
-}
+  /* ── NUMBERS BLOCK ── */
+  .nums {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px 8px;
+  }
 
-.num-row {
-display: flex;
-justify-content: space-between;
-align-items: baseline;
-border-bottom: 1px solid var(–rule);
-padding-bottom: 2px;
-}
+  .num-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 2px;
+  }
 
-.num-label {
-font-size: 7pt;
-color: var(–mid);
-font-weight: 500;
-text-transform: uppercase;
-letter-spacing: 0.5px;
-}
+  .num-label {
+    font-size: 7pt;
+    color: var(--mid);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
 
-.num-val {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-weight: 700;
-font-size: 10pt;
-color: var(–black);
-}
+  .num-val {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 10pt;
+    color: var(--black);
+  }
 
-.num-val.accent { color: var(–red); }
+  .num-val.accent { color: var(--red); }
 
-/* ── MEAL TABLE ── */
-.meal-row {
-display: grid;
-grid-template-columns: 52px 1fr auto;
-align-items: baseline;
-border-bottom: 1px solid var(–rule);
-padding: 2px 0;
-gap: 5px;
-}
+  /* ── MEAL TABLE ── */
+  .meal-row {
+    display: grid;
+    grid-template-columns: 52px 1fr auto;
+    align-items: baseline;
+    border-bottom: 1px solid var(--rule);
+    padding: 2px 0;
+    gap: 5px;
+  }
 
-.meal-time {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-weight: 700;
-font-size: 8.5pt;
-color: var(–mid);
-}
+  .meal-time {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 8.5pt;
+    color: var(--mid);
+  }
 
-.meal-name {
-font-size: 7.5pt;
-font-weight: 600;
-}
+  .meal-name {
+    font-size: 7.5pt;
+    font-weight: 600;
+  }
 
-.meal-detail {
-font-size: 6.5pt;
-color: var(–mid);
-font-weight: 400;
-}
+  .meal-detail {
+    font-size: 6.5pt;
+    color: var(--mid);
+    font-weight: 400;
+  }
 
-.meal-kcal {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-weight: 700;
-font-size: 9pt;
-text-align: right;
-white-space: nowrap;
-}
+  .meal-kcal {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 9pt;
+    text-align: right;
+    white-space: nowrap;
+  }
 
-/* ── WORKOUT TABLE ── */
-.day-row {
-display: grid;
-grid-template-columns: 26px 1fr 1fr;
-border-bottom: 1px solid var(–rule);
-padding: 2px 0;
-gap: 4px;
-align-items: baseline;
-}
+  /* ── WORKOUT TABLE ── */
+  .day-row {
+    display: grid;
+    grid-template-columns: 26px 1fr 1fr;
+    border-bottom: 1px solid var(--rule);
+    padding: 2px 0;
+    gap: 4px;
+    align-items: baseline;
+  }
 
-.day-name {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-weight: 900;
-font-size: 9pt;
-text-transform: uppercase;
-color: var(–red);
-}
+  .day-name {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 9pt;
+    text-transform: uppercase;
+    color: var(--red);
+  }
 
-.day-am {
-font-size: 7pt;
-font-weight: 600;
-}
+  .day-am {
+    font-size: 7pt;
+    font-weight: 600;
+  }
 
-.day-pm {
-font-size: 6.5pt;
-color: var(–mid);
-font-style: italic;
-}
+  .day-pm {
+    font-size: 6.5pt;
+    color: var(--mid);
+    font-style: italic;
+  }
 
-/* ── RULES ── */
-.rules-list {
-display: flex;
-flex-direction: column;
-gap: 3px;
-}
+  /* ── RULES ── */
+  .rules-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
 
-.rule-item {
-display: flex;
-gap: 5px;
-align-items: flex-start;
-border-bottom: 1px solid var(–rule);
-padding-bottom: 3px;
-}
+  .rule-item {
+    display: flex;
+    gap: 5px;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 3px;
+  }
 
-.rule-num {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-weight: 900;
-font-size: 13pt;
-line-height: 1;
-color: var(–red);
-flex-shrink: 0;
-width: 12px;
-text-align: center;
-}
+  .rule-num {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 13pt;
+    line-height: 1;
+    color: var(--red);
+    flex-shrink: 0;
+    width: 12px;
+    text-align: center;
+  }
 
-.rule-text strong {
-font-size: 7.5pt;
-font-weight: 700;
-display: block;
-line-height: 1.2;
-}
+  .rule-text strong {
+    font-size: 7.5pt;
+    font-weight: 700;
+    display: block;
+    line-height: 1.2;
+  }
 
-.rule-text span {
-font-size: 6.5pt;
-color: var(–mid);
-line-height: 1.3;
-}
+  .rule-text span {
+    font-size: 6.5pt;
+    color: var(--mid);
+    line-height: 1.3;
+  }
 
-/* ── MILESTONES ── */
-.milestone-bar {
-margin-top: 3px;
-}
+  /* ── MILESTONES ── */
+  .milestone-bar {
+    margin-top: 3px;
+  }
 
-.ms-row {
-display: grid;
-grid-template-columns: 50px 50px 1fr;
-align-items: baseline;
-border-bottom: 1px dashed var(–rule);
-padding: 2px 0;
-gap: 4px;
-}
+  .ms-row {
+    display: grid;
+    grid-template-columns: 50px 50px 1fr;
+    align-items: baseline;
+    border-bottom: 1px dashed var(--rule);
+    padding: 2px 0;
+    gap: 4px;
+  }
 
-.ms-time {
-font-size: 6.5pt;
-color: var(–mid);
-font-weight: 500;
-}
+  .ms-time {
+    font-size: 6.5pt;
+    color: var(--mid);
+    font-weight: 500;
+  }
 
-.ms-kg {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-weight: 700;
-font-size: 9.5pt;
-}
+  .ms-kg {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 9.5pt;
+  }
 
-.ms-note {
-font-size: 6pt;
-color: var(–mid);
-}
+  .ms-note {
+    font-size: 6pt;
+    color: var(--mid);
+  }
 
-/* ── ALERTS ── */
-.alert-strip {
-display: flex;
-gap: 6px;
-margin-top: 6px;
-}
+  /* ── ALERTS ── */
+  .alert-strip {
+    display: flex;
+    gap: 6px;
+    margin-top: 6px;
+  }
 
-.alert {
-flex: 1;
-border: 1.5px solid var(–black);
-border-left: 4px solid var(–amber);
-padding: 4px 6px;
-}
+  .alert {
+    flex: 1;
+    border: 1.5px solid var(--black);
+    border-left: 4px solid var(--amber);
+    padding: 4px 6px;
+  }
 
-.alert.critical { border-left-color: var(–red); }
-.alert.positive { border-left-color: var(–green); }
+  .alert.critical { border-left-color: var(--red); }
+  .alert.positive { border-left-color: var(--green); }
 
-.alert-head {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-weight: 700;
-font-size: 7.5pt;
-text-transform: uppercase;
-letter-spacing: 0.5px;
-margin-bottom: 1px;
-}
+  .alert-head {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 7.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 1px;
+  }
 
-.alert p {
-font-size: 6.5pt;
-color: var(–mid);
-line-height: 1.3;
-}
+  .alert p {
+    font-size: 6.5pt;
+    color: var(--mid);
+    line-height: 1.3;
+  }
 
-/* ── CARDIO BLOCK ── */
-.cardio-row {
-display: grid;
-grid-template-columns: 26px 1fr 28px;
-border-bottom: 1px solid var(–rule);
-padding: 2px 0;
-gap: 4px;
-align-items: baseline;
-}
+  /* ── CARDIO BLOCK ── */
+  .cardio-row {
+    display: grid;
+    grid-template-columns: 26px 1fr 28px;
+    border-bottom: 1px solid var(--rule);
+    padding: 2px 0;
+    gap: 4px;
+    align-items: baseline;
+  }
 
-.cardio-day {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-weight: 900;
-font-size: 9pt;
-color: var(–blue);
-}
+  .cardio-day {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 9pt;
+    color: var(--blue);
+  }
 
-.cardio-detail { font-size: 6.5pt; }
+  .cardio-detail { font-size: 6.5pt; }
 
-.cardio-dur {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-weight: 700;
-font-size: 9pt;
-text-align: right;
-}
+  .cardio-dur {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 9pt;
+    text-align: right;
+  }
 
-/* ── SHOPPING ── */
-.shop-cols {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 3px 10px;
-}
+  /* ── SHOPPING ── */
+  .shop-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px 10px;
+  }
 
-.shop-item {
-display: flex;
-justify-content: space-between;
-border-bottom: 1px dotted var(–rule);
-padding: 1px 0;
-font-size: 6.5pt;
-}
+  .shop-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dotted var(--rule);
+    padding: 1px 0;
+    font-size: 6.5pt;
+  }
 
-.shop-item .qty {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-weight: 700;
-font-size: 7.5pt;
-}
+  .shop-item .qty {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 7.5pt;
+  }
 
-/* ── FOOTER ── */
-.footer {
-margin-top: 6px;
-border-top: 2px solid var(–black);
-padding-top: 4px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-}
+  /* ── FOOTER ── */
+  .footer {
+    margin-top: 6px;
+    border-top: 2px solid var(--black);
+    padding-top: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-.footer-motto {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-weight: 900;
-font-size: 11pt;
-text-transform: uppercase;
-letter-spacing: 1px;
-}
+  .footer-motto {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 11pt;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
 
-.footer-motto span { color: var(–red); }
+  .footer-motto span { color: var(--red); }
 
-.footer-note {
-font-size: 6pt;
-color: var(–mid);
-text-align: right;
-}
+  .footer-note {
+    font-size: 6pt;
+    color: var(--mid);
+    text-align: right;
+  }
 
-/* Print */
-@media print {
-body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-}
+  /* Print */
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
 </style>
 
 </head>
