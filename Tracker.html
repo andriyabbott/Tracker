@@ -6,19 +6,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <title>Maximum Acceleration</title>
 <style>
-:root {
---bg: #0f0f13;
---card: #1a1a22;
---card2: #22222e;
---accent: #f97316;
---accent2: #fb923c;
---green: #22c55e;
---text: #f1f1f3;
---muted: #8888a0;
---border: #2e2e3e;
-}
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { background: var(--bg); color: var(--text); font-family: -apple-system, sans-serif; min-height: 100vh; padding-bottom: 80px; }
+  :root {
+    --bg: #0f0f13;
+    --card: #1a1a22;
+    --card2: #22222e;
+    --accent: #f97316;
+    --accent2: #fb923c;
+    --green: #22c55e;
+    --text: #f1f1f3;
+    --muted: #8888a0;
+    --border: #2e2e3e;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, sans-serif; min-height: 100vh; padding-bottom: 80px; }
 
 /* NAV */
 nav { position: fixed; bottom: 0; left: 0; right: 0; background: var(–card); border-top: 1px solid var(–border); display: flex; z-index: 100; }
@@ -90,38 +90,38 @@ header p { font-size: 12px; color: var(–muted); margin-top: 2px; }
 <body>
 
 <header>
-<h1>⚡ MAXIMUM ACCELERATION</h1>
-<p>104.3 kg → 77.1 kg · 8–10 Months</p>
-<div class="date-badge" id="dateBadge"></div>
+  <h1>⚡ MAXIMUM ACCELERATION</h1>
+  <p>104.3 kg → 77.1 kg · 8–10 Months</p>
+  <div class="date-badge" id="dateBadge"></div>
 </header>
 
 <!-- PAGE: TODAY -->
 
 <div class="page active" id="page-today">
 
-<div class="card" style="margin-top:16px;">
-<div class="progress-wrap">
-<div class="progress-label"><span>Today's Progress</span><span id="progressCount">0 / 0</span></div>
-<div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
-</div>
+  <div class="card" style="margin-top:16px;">
+    <div class="progress-wrap">
+      <div class="progress-label"><span>Today's Progress</span><span id="progressCount">0 / 0</span></div>
+      <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+    </div>
 
 ```
 <div class="card-title">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/><path d="M12 6v6l4 2"/></svg>
-Fasted Cardio — 4:30 AM
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/><path d="M12 6v6l4 2"/></svg>
+  Fasted Cardio — 4:30 AM
 </div>
 <div id="cardioList"></div>
 ```
 
-</div>
+  </div>
 
-<div class="card">
-<div class="card-title">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3v18M18 3v18M3 9h18M3 15h18"/></svg>
-<span id="workoutTitle">Today's Workout</span>
-</div>
-<div id="workoutList"></div>
-</div>
+  <div class="card">
+    <div class="card-title">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3v18M18 3v18M3 9h18M3 15h18"/></svg>
+      <span id="workoutTitle">Today's Workout</span>
+    </div>
+    <div id="workoutList"></div>
+  </div>
 
 <button class="reset-btn" onclick="resetToday()">↺ Reset today’s checklist</button>
 
@@ -130,149 +130,155 @@ Fasted Cardio — 4:30 AM
 <!-- PAGE: WORKOUT -->
 
 <div class="page" id="page-workout">
-<div style="margin-top:16px;" id="workoutDetail"></div>
+  <div style="margin-top:16px;" id="workoutDetail"></div>
 </div>
 
 <!-- PAGE: SCHEDULE -->
 
 <div class="page" id="page-schedule">
-<div class="card" style="margin-top:16px;">
-<div class="card-title">Weekly Schedule</div>
-<div id="scheduleGrid"></div>
-</div>
+  <div class="card" style="margin-top:16px;">
+    <div class="card-title">Weekly Schedule</div>
+    <div id="scheduleGrid"></div>
+  </div>
 </div>
 
 <!-- BOTTOM NAV -->
 
 <nav>
-<button class="active" onclick="showPage('today',this)">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-Today
-</button>
-<button onclick="showPage('workout',this)">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 4v16M18 4v16M2 9h4M18 9h4M2 15h4M18 15h4M6 9h12M6 15h12"/></svg>
-Workout
-</button>
-<button onclick="showPage('schedule',this)">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-Schedule
-</button>
+  <button class="active" onclick="showPage('today',this)">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+    Today
+  </button>
+  <button onclick="showPage('workout',this)">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 4v16M18 4v16M2 9h4M18 9h4M2 15h4M18 15h4M6 9h12M6 15h12"/></svg>
+    Workout
+  </button>
+  <button onclick="showPage('schedule',this)">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+    Schedule
+  </button>
 </nav>
 
 <script>
 const DAYS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
 const today = new Date();
-const dayIdx = today.getDay();
+const dayIdx = today.getDay(); // 0=Sun
 
+// Date badge
 document.getElementById('dateBadge').textContent =
-DAYS[dayIdx] + ' · ' + today.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+  DAYS[dayIdx] + ' · ' + today.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
 
+// ─── DATA ───────────────────────────────────────────────────
 const cardioByDay = {
-0: {name:'Outdoor Walk – Leisure Pace', duration:'20 min', note:'Fasted, before eating. Easy pace, HR < 115 bpm.'},
-1: {name:'Incline Treadmill Walk', duration:'15 min', note:'10% incline, 5 km/h, HR 120–135 bpm.'},
-2: {name:'Elliptical – Light Resistance', duration:'15 min', note:'HR 120–135 bpm.'},
-3: {name:'Recumbent/Upright Bike – Easy', duration:'20 min', note:'Lowest leg stress before Leg Day.'},
-4: {name:'Incline Treadmill Walk', duration:'15 min', note:'10% incline, 5 km/h.'},
-5: {name:'Elliptical or Stair Climber', duration:'15 min', note:'Your choice today.'},
-6: {name:'Incline Treadmill Walk', duration:'15 min', note:'10% incline, 5 km/h.'},
+  0: {name:'Outdoor Walk – Leisure Pace', duration:'20 min', note:'Fasted, before eating. Easy pace, HR < 115 bpm.'},
+  1: {name:'Incline Treadmill Walk', duration:'15 min', note:'10% incline, 5 km/h, HR 120–135 bpm.'},
+  2: {name:'Elliptical – Light Resistance', duration:'15 min', note:'HR 120–135 bpm.'},
+  3: {name:'Recumbent/Upright Bike – Easy', duration:'20 min', note:'Lowest leg stress before Leg Day.'},
+  4: {name:'Incline Treadmill Walk', duration:'15 min', note:'10% incline, 5 km/h.'},
+  5: {name:'Elliptical or Stair Climber', duration:'15 min', note:'Your choice today.'},
+  6: {name:'Incline Treadmill Walk', duration:'15 min', note:'10% incline, 5 km/h.'},
 };
 
 const workouts = {
-1: {
-name:'Push Day 1 – Chest Focus',
-exercises:[
-{n:'Flat Chest Press Machine',sets:4,reps:'6–8',rest:'90s',note:'Primary strength tracker – add weight every 1–2 weeks'},
-{n:'Incline Dumbbell Press',sets:4,reps:'8–10',rest:'75s',note:'3-sec controlled descent every rep'},
-{n:'Cable Chest Fly / Pec Deck',sets:3,reps:'12–15',rest:'60s',note:'Squeeze hard at peak contraction'},
-{n:'Shoulder Press Machine',sets:4,reps:'8–10',rest:'75s',note:'Sit tall – do not shrug at the top'},
-{n:'Lateral Raise (Dumbbells)',sets:4,reps:'12–15',rest:'60s',note:'Lead with elbows, slight forward lean'},
-{n:'Tricep Pushdown (Cable)',sets:3,reps:'12–15',rest:'60s',note:'Pin elbows to sides throughout'},
-{n:'Overhead Tricep Extension',sets:3,reps:'10–12',rest:'60s',note:'Full stretch at the bottom of each rep'},
-]
-},
-2: {
-name:'Pull Day 1 – Back Focus',
-exercises:[
-{n:'Lat Pulldown Machine',sets:4,reps:'6–8',rest:'90s',note:'Pull to upper chest – full stretch at top'},
-{n:'Seated Cable Row',sets:4,reps:'8–10',rest:'75s',note:'Drive elbows back hard, neutral spine'},
-{n:'Assisted Pull-Up Machine',sets:4,reps:'8–10',rest:'90s',note:'Reduce assistance 2–3 kg/month'},
-{n:'Chest-Supported DB Row',sets:3,reps:'10–12',rest:'75s',note:'Chest on bench – pure lat isolation'},
-{n:'Face Pulls (Cable)',sets:4,reps:'15–20',rest:'60s',note:'Every session – shoulder health & posture'},
-{n:'Alternating Dumbbell Curl',sets:3,reps:'10–12',rest:'60s',note:'Supinate wrist at the top of every rep'},
-{n:'Hammer Curl',sets:3,reps:'12',rest:'60s',note:'Neutral grip – builds brachialis thickness'},
-]
-},
-3: {
-name:'Leg Day – Full Lower Body',
-exercises:[
-{n:'Leg Press Machine',sets:4,reps:'8–10',rest:'2min',note:'Primary lower body strength tracker'},
-{n:'Hack Squat / Smith Machine Squat',sets:4,reps:'8–10',rest:'90s',note:'Full depth, chest tall'},
-{n:'Romanian Deadlift (Dumbbells)',sets:3,reps:'10–12',rest:'90s',note:'Hinge at hips, hamstring stretch, flat back'},
-{n:'Leg Extension Machine',sets:3,reps:'12–15',rest:'60s',note:'Squeeze quad 1 sec at full extension'},
-{n:'Seated Leg Curl',sets:3,reps:'12–15',rest:'60s',note:'Full range of motion – no jerking'},
-{n:'Hip Abductor Machine',sets:3,reps:'15–20',rest:'60s',note:'Slow and controlled – glutes & outer hips'},
-{n:'Standing Calf Raise',sets:4,reps:'15–20',rest:'60s',note:'Pause at top, full drop at bottom'},
-]
-},
-4: {
-name:'Push Day 2 – Shoulder Focus',
-exercises:[
-{n:'Overhead Shoulder Press Machine',sets:4,reps:'6–8',rest:'90s',note:'Primary shoulder strength tracker'},
-{n:'Arnold Press (Dumbbells)',sets:3,reps:'10–12',rest:'75s',note:'Full rotation – hits all three delt heads'},
-{n:'Lateral Raise (Cable)',sets:4,reps:'12–15',rest:'60s',note:'Cable keeps tension at bottom'},
-{n:'Incline Dumbbell Fly',sets:3,reps:'12–15',rest:'75s',note:'Deep stretch at bottom – moderate weight'},
-{n:'Dip Machine',sets:3,reps:'10–12',rest:'75s',note:'Lean forward for chest; upright for triceps'},
-{n:'Tricep Overhead Extension (Cable)',sets:3,reps:'12–15',rest:'60s',note:'Elbows forward, full extension'},
-{n:'Rear Delt Fly (Pec Deck reversed)',sets:3,reps:'15',rest:'60s',note:'Prevents rounded shoulder posture'},
-]
-},
-5: {
-name:'Pull Day 2 + Arms – Volume Day',
-exercises:[
-{n:'Cable Straight-Arm Pulldown',sets:4,reps:'12–15',rest:'60s',note:'Lat isolation warm-up'},
-{n:'Chest-Supported Machine Row',sets:4,reps:'8–10',rest:'90s',note:'Go heavy – push for strength PRs today'},
-{n:'Single-Arm Lat Pulldown',sets:3,reps:'10–12',rest:'75s',note:'Corrects left/right imbalances'},
-{n:'Reverse Fly (Dumbbells)',sets:3,reps:'15',rest:'60s',note:'Light weight, strict form'},
-{n:'EZ Bar Curl',sets:4,reps:'8–10',rest:'90s',note:'Primary bicep strength – heavier than Tuesday'},
-{n:'Incline Dumbbell Curl',sets:3,reps:'10–12',rest:'75s',note:'Best long-head stretch – full ROM'},
-{n:'Cable Curl',sets:3,reps:'12–15',rest:'60s',note:'Constant tension finisher – pump-focused'},
-]
-},
-6: {
-name:'Arms & Shoulders Specialisation',
-exercises:[
-{n:'Lateral + Front Raise Superset (DB)',sets:4,reps:'12 each',rest:'60s',note:'No rest between exercises'},
-{n:'Cable Lateral Raise (single arm)',sets:3,reps:'15/side',rest:'45s',note:'Cable tension superior for delts'},
-{n:'Upright Row (Cable or EZ Bar)',sets:3,reps:'12',rest:'60s',note:'Stop bar at chin – traps & medial delts'},
-{n:'Concentration Curl (Dumbbell)',sets:3,reps:'12/side',rest:'60s',note:'Peak bicep isolation – deliberate & slow'},
-{n:'Cable Curl 21s',sets:3,reps:'21',rest:'75s',note:'7 lower / 7 upper / 7 full reps per set'},
-{n:'Tricep Pushdown + Overhead Ext Superset',sets:3,reps:'12 each',rest:'60s',note:'Full tricep pump finisher'},
-{n:'Dumbbell Shrug',sets:3,reps:'15–20',rest:'60s',note:'Hold 1 sec at top – trap development'},
-]
-},
-0: { name:'Rest Day', exercises:[] }
+  1: {
+    name:'Push Day 1 – Chest Focus',
+    exercises:[
+      {n:'Flat Chest Press Machine',sets:4,reps:'6–8',rest:'90s',note:'Primary strength tracker – add weight every 1–2 weeks'},
+      {n:'Incline Dumbbell Press',sets:4,reps:'8–10',rest:'75s',note:'3-sec controlled descent every rep'},
+      {n:'Cable Chest Fly / Pec Deck',sets:3,reps:'12–15',rest:'60s',note:'Squeeze hard at peak contraction'},
+      {n:'Shoulder Press Machine',sets:4,reps:'8–10',rest:'75s',note:'Sit tall – do not shrug at the top'},
+      {n:'Lateral Raise (Dumbbells)',sets:4,reps:'12–15',rest:'60s',note:'Lead with elbows, slight forward lean'},
+      {n:'Tricep Pushdown (Cable)',sets:3,reps:'12–15',rest:'60s',note:'Pin elbows to sides throughout'},
+      {n:'Overhead Tricep Extension',sets:3,reps:'10–12',rest:'60s',note:'Full stretch at the bottom of each rep'},
+    ]
+  },
+  2: {
+    name:'Pull Day 1 – Back Focus',
+    exercises:[
+      {n:'Lat Pulldown Machine',sets:4,reps:'6–8',rest:'90s',note:'Pull to upper chest – full stretch at top'},
+      {n:'Seated Cable Row',sets:4,reps:'8–10',rest:'75s',note:'Drive elbows back hard, neutral spine'},
+      {n:'Assisted Pull-Up Machine',sets:4,reps:'8–10',rest:'90s',note:'Reduce assistance 2–3 kg/month'},
+      {n:'Chest-Supported DB Row',sets:3,reps:'10–12',rest:'75s',note:'Chest on bench – pure lat isolation'},
+      {n:'Face Pulls (Cable)',sets:4,reps:'15–20',rest:'60s',note:'Every session – shoulder health & posture'},
+      {n:'Alternating Dumbbell Curl',sets:3,reps:'10–12',rest:'60s',note:'Supinate wrist at the top of every rep'},
+      {n:'Hammer Curl',sets:3,reps:'12',rest:'60s',note:'Neutral grip – builds brachialis thickness'},
+    ]
+  },
+  3: {
+    name:'Leg Day – Full Lower Body',
+    exercises:[
+      {n:'Leg Press Machine',sets:4,reps:'8–10',rest:'2min',note:'Primary lower body strength tracker'},
+      {n:'Hack Squat / Smith Machine Squat',sets:4,reps:'8–10',rest:'90s',note:'Full depth, chest tall'},
+      {n:'Romanian Deadlift (Dumbbells)',sets:3,reps:'10–12',rest:'90s',note:'Hinge at hips, hamstring stretch, flat back'},
+      {n:'Leg Extension Machine',sets:3,reps:'12–15',rest:'60s',note:'Squeeze quad 1 sec at full extension'},
+      {n:'Seated Leg Curl',sets:3,reps:'12–15',rest:'60s',note:'Full range of motion – no jerking'},
+      {n:'Hip Abductor Machine',sets:3,reps:'15–20',rest:'60s',note:'Slow and controlled – glutes & outer hips'},
+      {n:'Standing Calf Raise',sets:4,reps:'15–20',rest:'60s',note:'Pause at top, full drop at bottom'},
+    ]
+  },
+  4: {
+    name:'Push Day 2 – Shoulder Focus',
+    exercises:[
+      {n:'Overhead Shoulder Press Machine',sets:4,reps:'6–8',rest:'90s',note:'Primary shoulder strength tracker'},
+      {n:'Arnold Press (Dumbbells)',sets:3,reps:'10–12',rest:'75s',note:'Full rotation – hits all three delt heads'},
+      {n:'Lateral Raise (Cable)',sets:4,reps:'12–15',rest:'60s',note:'Cable keeps tension at bottom'},
+      {n:'Incline Dumbbell Fly',sets:3,reps:'12–15',rest:'75s',note:'Deep stretch at bottom – moderate weight'},
+      {n:'Dip Machine',sets:3,reps:'10–12',rest:'75s',note:'Lean forward for chest; upright for triceps'},
+      {n:'Tricep Overhead Extension (Cable)',sets:3,reps:'12–15',rest:'60s',note:'Elbows forward, full extension'},
+      {n:'Rear Delt Fly (Pec Deck reversed)',sets:3,reps:'15',rest:'60s',note:'Prevents rounded shoulder posture'},
+    ]
+  },
+  5: {
+    name:'Pull Day 2 + Arms – Volume Day',
+    exercises:[
+      {n:'Cable Straight-Arm Pulldown',sets:4,reps:'12–15',rest:'60s',note:'Lat isolation warm-up'},
+      {n:'Chest-Supported Machine Row',sets:4,reps:'8–10',rest:'90s',note:'Go heavy – push for strength PRs today'},
+      {n:'Single-Arm Lat Pulldown',sets:3,reps:'10–12',rest:'75s',note:'Corrects left/right imbalances'},
+      {n:'Reverse Fly (Dumbbells)',sets:3,reps:'15',rest:'60s',note:'Light weight, strict form'},
+      {n:'EZ Bar Curl',sets:4,reps:'8–10',rest:'90s',note:'Primary bicep strength – heavier than Tuesday'},
+      {n:'Incline Dumbbell Curl',sets:3,reps:'10–12',rest:'75s',note:'Best long-head stretch – full ROM'},
+      {n:'Cable Curl',sets:3,reps:'12–15',rest:'60s',note:'Constant tension finisher – pump-focused'},
+    ]
+  },
+  6: {
+    name:'Arms & Shoulders Specialisation',
+    exercises:[
+      {n:'Lateral + Front Raise Superset (DB)',sets:4,reps:'12 each',rest:'60s',note:'No rest between exercises'},
+      {n:'Cable Lateral Raise (single arm)',sets:3,reps:'15/side',rest:'45s',note:'Cable tension superior for delts'},
+      {n:'Upright Row (Cable or EZ Bar)',sets:3,reps:'12',rest:'60s',note:'Stop bar at chin – traps & medial delts'},
+      {n:'Concentration Curl (Dumbbell)',sets:3,reps:'12/side',rest:'60s',note:'Peak bicep isolation – deliberate & slow'},
+      {n:'Cable Curl 21s',sets:3,reps:'21',rest:'75s',note:'7 lower / 7 upper / 7 full reps per set'},
+      {n:'Tricep Pushdown + Overhead Ext Superset',sets:3,reps:'12 each',rest:'60s',note:'Full tricep pump finisher'},
+      {n:'Dumbbell Shrug',sets:3,reps:'15–20',rest:'60s',note:'Hold 1 sec at top – trap development'},
+    ]
+  },
+  0: {
+    name:'Rest Day',
+    exercises:[]
+  }
 };
 
 const pmSessions = {
-1:{label:'LISS – 35 min',note:'Outdoor steady jog or brisk walk · HR 120–140 bpm'},
-2:{label:'Recovery Walk – 25 min',note:'Easy outdoor walk · HR < 115 bpm'},
-3:{label:'HIIT – 20 min',note:'5 min jog → 8×[30s sprint / 90s walk] → 3 min cooldown'},
-4:{label:'LISS – 35 min',note:'Elliptical or recumbent bike · Low impact'},
-5:{label:'Core Circuit – 20 min (Home)',note:'Dead Bug · Plank · Pallof Press · Russian Twist · Leg Raise · Ab Wheel'},
-6:{label:'LISS – 30 min',note:'Stair climber or outdoor walk · HR 120–135 bpm'},
-0:{label:'No PM session',note:'Free afternoon – recovery only'}
+  1:{type:'LISS',label:'LISS – 35 min',note:'Outdoor steady jog or brisk walk · HR 120–140 bpm'},
+  2:{type:'Walk',label:'Recovery Walk – 25 min',note:'Easy outdoor walk · HR < 115 bpm'},
+  3:{type:'HIIT',label:'HIIT – 20 min',note:'5 min jog → 8×[30s sprint / 90s walk] → 3 min cooldown'},
+  4:{type:'LISS',label:'LISS – 35 min',note:'Elliptical or recumbent bike · Low impact'},
+  5:{type:'Core',label:'Core Circuit – 20 min (Home)',note:'Dead Bug · Plank · Pallof Press · Russian Twist · Leg Raise · Ab Wheel'},
+  6:{type:'LISS',label:'LISS – 30 min',note:'Stair climber or outdoor walk · HR 120–135 bpm'},
+  0:{type:'Rest',label:'No PM session',note:'Free afternoon – recovery only'}
 };
 
 const scheduleData = [
-{d:'Mon',lift:'Push Day 1 – Chest (55 min)',pm:'LISS Cardio – 35 min',liftT:'5:15 AM',pmT:'4:30 PM'},
-{d:'Tue',lift:'Pull Day 1 – Back (55 min)',pm:'Recovery Walk – 25 min',liftT:'5:15 AM',pmT:'4:30 PM'},
-{d:'Wed',lift:'Leg Day – Full Lower (60 min)',pm:'HIIT – 20 min Sprints',liftT:'5:15 AM',pmT:'4:30 PM'},
-{d:'Thu',lift:'Push Day 2 – Shoulders (55 min)',pm:'LISS Cardio – 35 min',liftT:'5:15 AM',pmT:'4:30 PM'},
-{d:'Fri',lift:'Pull Day 2 + Arms (60 min)',pm:'Core Circuit – 20 min (Home)',liftT:'5:15 AM',pmT:'4:30 PM'},
-{d:'Sat',lift:'Arms & Shoulders (50 min)',pm:'LISS – 30 min',liftT:'5:15 AM',pmT:'4:30 PM'},
-{d:'Sun',lift:'Rest – no lifting',pm:'Fasted Walk – 20 min (morning)',liftT:'—',pmT:'Morning'},
+  {d:'Mon',lift:'Push Day 1 – Chest (55 min)',pm:'LISS Cardio – 35 min',liftT:'5:15 AM',pmT:'4:30 PM'},
+  {d:'Tue',lift:'Pull Day 1 – Back (55 min)',pm:'Recovery Walk – 25 min',liftT:'5:15 AM',pmT:'4:30 PM'},
+  {d:'Wed',lift:'Leg Day – Full Lower (60 min)',pm:'HIIT – 20 min Sprints',liftT:'5:15 AM',pmT:'4:30 PM'},
+  {d:'Thu',lift:'Push Day 2 – Shoulders (55 min)',pm:'LISS Cardio – 35 min',liftT:'5:15 AM',pmT:'4:30 PM'},
+  {d:'Fri',lift:'Pull Day 2 + Arms (60 min)',pm:'Core Circuit – 20 min (Home)',liftT:'5:15 AM',pmT:'4:30 PM'},
+  {d:'Sat',lift:'Arms & Shoulders (50 min)',pm:'LISS – 30 min',liftT:'5:15 AM',pmT:'4:30 PM'},
+  {d:'Sun',lift:'Rest – no lifting',pm:'Fasted Walk – 20 min (morning)',liftT:'—',pmT:'Morning'},
 ];
 
+// ─── STATE ──────────────────────────────────────────────────
 const KEY = 'maTracker_' + today.toISOString().slice(0,10);
 let state = JSON.parse(localStorage.getItem(KEY) || '{}');
 if (!state.cardio) state.cardio = false;
@@ -281,178 +287,210 @@ if (!state.sets) state.sets = {};
 
 function save() { localStorage.setItem(KEY, JSON.stringify(state)); }
 
+// ─── RENDER TODAY ────────────────────────────────────────────
 function renderToday() {
-const c = cardioByDay[dayIdx];
-const cardioEl = document.getElementById('cardioList');
-cardioEl.innerHTML = '';
-cardioEl.appendChild(makeCheckItem('cardio_main', state.cardio,
-c.name + ' – ' + c.duration, c.note, () => {
-state.cardio = !state.cardio; save(); renderProgress();
-}
-));
+  // Cardio
+  const c = cardioByDay[dayIdx];
+  const cardioEl = document.getElementById('cardioList');
+  cardioEl.innerHTML = '';
+  cardioEl.appendChild(makeCheckItem('cardio_main', state.cardio,
+    c.name + ' – ' + c.duration, c.note, () => {
+      state.cardio = !state.cardio; save(); renderProgress();
+      document.getElementById('cardioList').querySelector('.check-box').classList.toggle('done', state.cardio);
+      document.getElementById('cardioList').querySelector('.check-label').classList.toggle('done', state.cardio);
+      const svg = document.getElementById('cardioList').querySelector('.check-box svg');
+      svg.style.display = state.cardio ? 'block' : 'none';
+    }
+  ));
 
-const w = workouts[dayIdx];
-const wEl = document.getElementById('workoutList');
-document.getElementById('workoutTitle').textContent = w.name;
-wEl.innerHTML = '';
+  // Workout
+  const w = workouts[dayIdx];
+  const wEl = document.getElementById('workoutList');
+  document.getElementById('workoutTitle').textContent = w.name;
+  wEl.innerHTML = '';
 
-if (dayIdx === 0) {
-wEl.innerHTML = '<p style="color:var(--muted);font-size:13px;padding:4px 0;">Rest day – no lifting. Enjoy the recovery.</p>';
-} else {
-w.exercises.forEach((ex, i) => {
-const div = document.createElement('div');
-div.className = 'exercise';
-div.innerHTML = `<div class="ex-name">${ex.n}</div>
-<div class="ex-meta">${ex.sets} sets × ${ex.reps} · Rest ${ex.rest} · <em>${ex.note}</em></div>
-<div class="sets-row" id="sets_${i}"></div>`;
-wEl.appendChild(div);
-renderSets(i, ex.sets);
-});
-}
+  if (dayIdx === 0) {
+    wEl.innerHTML = '<p style="color:var(--muted);font-size:13px;padding:4px 0;">Rest day – no lifting. Enjoy the recovery.</p>';
+  } else {
+    w.exercises.forEach((ex, i) => {
+      const div = document.createElement('div');
+      div.className = 'exercise';
+      div.innerHTML = `<div class="ex-name">${ex.n}</div>
+        <div class="ex-meta">${ex.sets} sets × ${ex.reps} · Rest ${ex.rest} · <em>${ex.note}</em></div>
+        <div class="sets-row" id="sets_${i}"></div>`;
+      wEl.appendChild(div);
+      renderSets(i, ex.sets);
+    });
+  }
 
-const pm = pmSessions[dayIdx];
-cardioEl.appendChild(makeCheckItem('pm_main', state.pm,
-'PM: ' + pm.label, pm.note, () => {
-state.pm = !state.pm; save(); renderProgress();
-}
-));
+  // PM session check
+  const pm = pmSessions[dayIdx];
+  const pmCard = document.createElement('div');
+  pmCard.innerHTML = '';
+  // Add PM to cardio card as second item
+  const pmItem = makeCheckItem('pm_main', state.pm,
+    'PM: ' + pm.label, pm.note, () => {
+      state.pm = !state.pm; save(); renderProgress();
+      const boxes = document.getElementById('cardioList').querySelectorAll('.check-box');
+      const labels = document.getElementById('cardioList').querySelectorAll('.check-label');
+      boxes[1] && boxes[1].classList.toggle('done', state.pm);
+      labels[1] && labels[1].classList.toggle('done', state.pm);
+    }
+  );
+  cardioEl.appendChild(pmItem);
 
-renderProgress();
+  renderProgress();
 }
 
 function makeCheckItem(id, checked, label, sub, cb) {
-const div = document.createElement('div');
-div.className = 'check-item';
-div.innerHTML = `
-<div class="check-box ${checked?'done':''}">
-<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" style="display:${checked?'block':'none'}"><polyline points="20 6 9 17 4 12"/></svg>
-</div>
-<div>
-<div class="check-label ${checked?'done':''}">${label}</div>
-<div class="check-sub">${sub}</div>
-</div>`;
-div.addEventListener('click', () => {
-cb();
-const box = div.querySelector('.check-box');
-const lbl = div.querySelector('.check-label');
-const svg = div.querySelector('.check-box svg');
-const isNowDone = box.classList.toggle('done');
-lbl.classList.toggle('done', isNowDone);
-svg.style.display = isNowDone ? 'block' : 'none';
-renderProgress();
-});
-return div;
+  const div = document.createElement('div');
+  div.className = 'check-item';
+  div.innerHTML = `
+    <div class="check-box ${checked?'done':''}">
+      <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" style="display:${checked?'block':'none'}"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <div>
+      <div class="check-label ${checked?'done':''}">${label}</div>
+      <div class="check-sub">${sub}</div>
+    </div>`;
+  div.addEventListener('click', () => {
+    cb();
+    const box = div.querySelector('.check-box');
+    const lbl = div.querySelector('.check-label');
+    const svg = div.querySelector('.check-box svg');
+    const isNowDone = box.classList.toggle('done');
+    lbl.classList.toggle('done', isNowDone);
+    svg.style.display = isNowDone ? 'block' : 'none';
+    renderProgress();
+  });
+  return div;
 }
 
 function renderSets(exIdx, numSets) {
-const container = document.getElementById('sets_' + exIdx);
-if (!container) return;
-container.innerHTML = '';
-for (let s = 0; s < numSets; s++) {
-const key = exIdx + '_' + s;
-const done = !!(state.sets && state.sets[key]);
-const btn = document.createElement('button');
-btn.className = 'set-btn' + (done ? ' done' : '');
-btn.textContent = s + 1;
-btn.addEventListener('click', () => {
-state.sets[key] = !state.sets[key];
-btn.classList.toggle('done', state.sets[key]);
-save(); renderProgress();
-});
-container.appendChild(btn);
-}
+  const container = document.getElementById('sets_' + exIdx);
+  if (!container) return;
+  container.innerHTML = '';
+  for (let s = 0; s < numSets; s++) {
+    const key = exIdx + '_' + s;
+    const done = !!(state.sets && state.sets[key]);
+    const btn = document.createElement('button');
+    btn.className = 'set-btn' + (done ? ' done' : '');
+    btn.textContent = s + 1;
+    btn.addEventListener('click', () => {
+      state.sets[key] = !state.sets[key];
+      btn.classList.toggle('done', state.sets[key]);
+      save(); renderProgress();
+    });
+    container.appendChild(btn);
+  }
 }
 
 function renderProgress() {
-const w = workouts[dayIdx];
-let total = 2;
-let done = (state.cardio ? 1 : 0) + (state.pm ? 1 : 0);
-if (dayIdx !== 0) {
-w.exercises.forEach((ex, i) => {
-for (let s = 0; s < ex.sets; s++) {
-total++;
-if (state.sets[i + '_' + s]) done++;
-}
-});
-}
-document.getElementById('progressCount').textContent = done + ' / ' + total;
-document.getElementById('progressFill').style.width = (total ? Math.round(done/total*100) : 0) + '%';
+  const w = workouts[dayIdx];
+  let total = 2; // cardio + pm
+  let done = (state.cardio ? 1 : 0) + (state.pm ? 1 : 0);
+
+  if (dayIdx !== 0) {
+    w.exercises.forEach((ex, i) => {
+      for (let s = 0; s < ex.sets; s++) {
+        total++;
+        if (state.sets[i + '_' + s]) done++;
+      }
+    });
+  }
+
+  document.getElementById('progressCount').textContent = done + ' / ' + total;
+  document.getElementById('progressFill').style.width = (total ? Math.round(done/total*100) : 0) + '%';
 }
 
+// ─── RENDER WORKOUT DETAIL ───────────────────────────────────
 function renderWorkoutDetail() {
-const container = document.getElementById('workoutDetail');
-container.innerHTML = '';
-DAYS.forEach((d, idx) => {
-const w = workouts[idx];
-const card = document.createElement('div');
-card.className = 'card' + (idx === dayIdx ? ' today-highlight' : '');
-let inner = `<div class="card-title">${d}${idx===dayIdx?'<span class="today-dot"></span>':''} – ${w.name}</div>`;
-if (w.exercises.length === 0) {
-inner += '<p style="color:var(--muted);font-size:13px;">Rest day – no lifting.</p>';
-} else {
-w.exercises.forEach(ex => {
-inner += `<div style="padding:7px 0;border-bottom:1px solid var(--border)">
-<div style="font-size:13px;font-weight:600">${ex.n}</div>
-<div style="font-size:11px;color:var(--muted);margin-top:2px">${ex.sets} × ${ex.reps} · Rest ${ex.rest}</div>
-<div style="font-size:11px;color:#888;margin-top:1px;font-style:italic">${ex.note}</div>
-</div>`;
-});
-}
-card.innerHTML = inner;
-container.appendChild(card);
-});
+  const container = document.getElementById('workoutDetail');
+  container.innerHTML = '';
+
+  DAYS.forEach((d, idx) => {
+    const w = workouts[idx];
+    const card = document.createElement('div');
+    card.className = 'card' + (idx === dayIdx ? ' today-highlight' : '');
+    let inner = `<div class="card-title">${d}${idx===dayIdx?'<span class="today-dot"></span>':''} – ${w.name}</div>`;
+    if (w.exercises.length === 0) {
+      inner += '<p style="color:var(--muted);font-size:13px;">Rest day – no lifting.</p>';
+    } else {
+      w.exercises.forEach(ex => {
+        inner += `<div style="padding:7px 0;border-bottom:1px solid var(--border)">
+          <div style="font-size:13px;font-weight:600">${ex.n}</div>
+          <div style="font-size:11px;color:var(--muted);margin-top:2px">${ex.sets} × ${ex.reps} · Rest ${ex.rest}</div>
+          <div style="font-size:11px;color:#888;margin-top:1px;font-style:italic">${ex.note}</div>
+        </div>`;
+      });
+    }
+    card.innerHTML = inner;
+    container.appendChild(card);
+  });
 }
 
+// ─── RENDER SCHEDULE ─────────────────────────────────────────
 function renderSchedule() {
-const grid = document.getElementById('scheduleGrid');
-grid.innerHTML = '';
-const todayName = DAYS[dayIdx];
-scheduleData.forEach(row => {
-const isToday = row.d === todayName;
-const div = document.createElement('div');
-div.className = 'day-row';
-div.innerHTML = `
-<div class="day-label">${row.d}${isToday?'<span class="today-dot"></span>':''}</div>
-<div class="day-blocks">
-<div class="block lift"><div class="time">${row.liftT}</div>${row.lift}</div>
-<div class="block cardio"><div class="time">${row.pmT}</div>${row.pm}</div>
-</div>`;
-grid.appendChild(div);
-});
+  const grid = document.getElementById('scheduleGrid');
+  grid.innerHTML = '';
+  const todayName = DAYS[dayIdx];
 
-const mealsCard = document.createElement('div');
-mealsCard.className = 'card';
-mealsCard.innerHTML = `<div class="card-title">Daily Meal Timing</div>
-${[
-['6:15–6:30 AM','Breakfast – Eggs + Oats + PB'],
-['9:30 AM','Snack – Greek Yogurt + Blueberries'],
-['12:00 PM','Lunch – Chicken + Buckwheat/SP + Greens'],
-['4:00 PM','Pre-PM Snack – Banana + Whey (Mon/Wed/Thu only)'],
-['7:00 PM','Dinner – Turkey + Black Beans + Buckwheat/SP'],
-['9:00 PM','Evening – Cottage Cheese + Magnesium'],
-['9:30 PM','IN BED ✓'],
-].map(([t,m])=>`<div class="check-item" style="cursor:default">
-<div style="min-width:76px;font-size:11px;color:var(--accent);font-weight:600">${t}</div>
-<div style="font-size:13px">${m}</div>
-</div>`).join('')}`;
-grid.parentElement.appendChild(mealsCard);
+  scheduleData.forEach(row => {
+    const isToday = row.d === todayName;
+    const div = document.createElement('div');
+    div.className = 'day-row';
+    div.innerHTML = `
+      <div class="day-label">${row.d}${isToday?'<span class="today-dot"></span>':''}</div>
+      <div class="day-blocks">
+        <div class="block lift">
+          <div class="time">${row.liftT}</div>
+          ${row.lift}
+        </div>
+        <div class="block cardio">
+          <div class="time">${row.pmT}</div>
+          ${row.pm}
+        </div>
+      </div>`;
+    grid.appendChild(div);
+  });
+
+  // Meals timing card
+  const mealsCard = document.createElement('div');
+  mealsCard.className = 'card';
+  mealsCard.innerHTML = `<div class="card-title">Daily Meal Timing</div>
+    ${[
+      ['6:15–6:30 AM','Breakfast – Eggs + Oats + PB'],
+      ['9:30 AM','Snack – Greek Yogurt + Blueberries'],
+      ['12:00 PM','Lunch – Chicken + Buckwheat/SP + Greens'],
+      ['4:00 PM','Pre-PM Snack – Banana + Whey (Mon/Wed/Thu only)'],
+      ['7:00 PM','Dinner – Turkey + Black Beans + Buckwheat/SP'],
+      ['9:00 PM','Evening – Cottage Cheese + Magnesium'],
+      ['9:30 PM','IN BED ✓'],
+    ].map(([t,m])=>`<div class="check-item" style="cursor:default">
+      <div style="min-width:76px;font-size:11px;color:var(--accent);font-weight:600">${t}</div>
+      <div style="font-size:13px">${m}</div>
+    </div>`).join('')}`;
+  grid.parentElement.appendChild(mealsCard);
 }
 
+// ─── RESET ───────────────────────────────────────────────────
 function resetToday() {
-if (confirm('Reset all of today\'s checks?')) {
-state = { cardio: false, pm: false, sets: {} };
-save();
-renderToday();
-}
+  if (confirm('Reset all of today\'s checks?')) {
+    state = { cardio: false, pm: false, sets: {} };
+    save();
+    renderToday();
+  }
 }
 
+// ─── NAV ─────────────────────────────────────────────────────
 function showPage(id, btn) {
-document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
-document.getElementById('page-' + id).classList.add('active');
-btn.classList.add('active');
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
+  btn.classList.add('active');
 }
 
+// ─── INIT ────────────────────────────────────────────────────
 renderToday();
 renderWorkoutDetail();
 renderSchedule();
