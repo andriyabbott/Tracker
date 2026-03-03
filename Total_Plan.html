@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weight Loss Plan — Quick Reference</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0d0d0d;
+    --white: #f5f2ec;
+    --red: #d63b2f;
+    --amber: #e8a020;
+    --green: #2a7a4b;
+    --blue: #1a5fa8;
+    --mid: #3a3a3a;
+    --rule: #d0c9b8;
+  }
+
+- { margin: 0; padding: 0; box-sizing: border-box; }
+
+@page {
+size: A4;
+margin: 0;
+}
+
+body {
+font-family: ‘Barlow’, sans-serif;
+background: var(–white);
+color: var(–black);
+width: 210mm;
+min-height: 297mm;
+margin: 0 auto;
+padding: 10mm 10mm 8mm;
+font-size: 8pt;
+line-height: 1.35;
+}
+
+/* ── HEADER ── */
+.header {
+display: flex;
+justify-content: space-between;
+align-items: flex-end;
+border-bottom: 3px solid var(–black);
+padding-bottom: 4px;
+margin-bottom: 7px;
+}
+
+.header-left h1 {
+font-family: ‘Barlow Condensed’, sans-serif;
+font-weight: 900;
+font-size: 26pt;
+line-height: 1;
+text-transform: uppercase;
+letter-spacing: -0.5px;
+}
+
+.header-left h1 span {
+color: var(–red);
+}
+
+.header-left .sub {
+font-family: ‘Barlow Condensed’, sans-serif;
+font-size: 10pt;
+font-weight: 600;
+letter-spacing: 2px;
+text-transform: uppercase;
+color: var(–mid);
+margin-top: 1px;
+}
+
+.header-right {
+text-align: right;
+padding-bottom: 2px;
+}
+
+.stat-pill {
+display: inline-block;
+background: var(–black);
+color: var(–white);
+font-family: ‘Barlow Condensed’, sans-serif;
+font-weight: 700;
+font-size: 9pt;
+padding: 2px 7px;
+margin-left: 3px;
+letter-spacing: 0.5px;
+}
+
+.stat-pill.red { background: var(–red); }
+.stat-pill.green { background: var(–green); }
+.stat-pill.blue { background: var(–blue); }
+
+/* ── GRID ── */
+.grid {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+gap: 6px;
+}
+
+.col-span-2 { grid-column: span 2; }
+
+/* ── CARD ── */
+.card {
+border: 1.5px solid var(–black);
+padding: 6px 7px 5px;
+position: relative;
+}
+
+.card-title {
+font-family: ‘Barlow Condensed’, sans-serif;
+font-weight: 900;
+font-size: 8pt;
+text-transform: uppercase;
+letter-spacing: 1.5px;
+background: var(–black);
+color: var(–white);
+display: inline-block;
+padding: 1px 6px;
+margin-bottom: 5px;
+margin-left: -7px;
+}
+
+.card-title.red { background: var(–red); }
+.card-title.green { background: var(–green); }
+.card-title.blue { background: var(–blue); }
+.card-title.amber { background: var(–amber); color: var(–black); }
+
+/* ── NUMBERS BLOCK ── */
+.nums {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 3px 8px;
+}
+
+.num-row {
+display: flex;
+justify-content: space-between;
+align-items: baseline;
+border-bottom: 1px solid var(–rule);
+padding-bottom: 2px;
+}
+
+.num-label {
+font-size: 7pt;
+color: var(–mid);
+font-weight: 500;
+text-transform: uppercase;
+letter-spacing: 0.5px;
+}
+
+.num-val {
+font-family: ‘Barlow Condensed’, sans-serif;
+font-weight: 700;
+font-size: 10pt;
+color: var(–black);
+}
+
+.num-val.accent { color: var(–red); }
+
+/* ── MEAL TABLE ── */
+.meal-row {
+display: grid;
+grid-template-columns: 52px 1fr auto;
+align-items: baseline;
+border-bottom: 1px solid var(–rule);
+padding: 2px 0;
+gap: 5px;
+}
+
+.meal-time {
+font-family: ‘Barlow Condensed’, sans-serif;
+font-weight: 700;
+font-size: 8.5pt;
+color: var(–mid);
+}
+
+.meal-name {
+font-size: 7.5pt;
+font-weight: 600;
+}
+
+.meal-detail {
+font-size: 6.5pt;
+color: var(–mid);
+font-weight: 400;
+}
+
+.meal-kcal {
+font-family: ‘Barlow Condensed’, sans-serif;
+font-weight: 700;
+font-size: 9pt;
+text-align: right;
+white-space: nowrap;
+}
+
+/* ── WORKOUT TABLE ── */
+.day-row {
+display: grid;
+grid-template-columns: 26px 1fr 1fr;
+border-bottom: 1px solid var(–rule);
+padding: 2px 0;
+gap: 4px;
+align-items: baseline;
+}
+
+.day-name {
+font-family: ‘Barlow Condensed’, sans-serif;
+font-weight: 900;
+font-size: 9pt;
+text-transform: uppercase;
+color: var(–red);
+}
+
+.day-am {
+font-size: 7pt;
+font-weight: 600;
+}
+
+.day-pm {
+font-size: 6.5pt;
+color: var(–mid);
+font-style: italic;
+}
+
+/* ── RULES ── */
+.rules-list {
+display: flex;
+flex-direction: column;
+gap: 3px;
+}
+
+.rule-item {
+display: flex;
+gap: 5px;
+align-items: flex-start;
+border-bottom: 1px solid var(–rule);
+padding-bottom: 3px;
+}
+
+.rule-num {
+font-family: ‘Barlow Condensed’, sans-serif;
+font-weight: 900;
+font-size: 13pt;
+line-height: 1;
+color: var(–red);
+flex-shrink: 0;
+width: 12px;
+text-align: center;
+}
+
+.rule-text strong {
+font-size: 7.5pt;
+font-weight: 700;
+display: block;
+line-height: 1.2;
+}
+
+.rule-text span {
+font-size: 6.5pt;
+color: var(–mid);
+line-height: 1.3;
+}
+
+/* ── MILESTONES ── */
+.milestone-bar {
+margin-top: 3px;
+}
+
+.ms-row {
+display: grid;
+grid-template-columns: 50px 50px 1fr;
+align-items: baseline;
+border-bottom: 1px dashed var(–rule);
+padding: 2px 0;
+gap: 4px;
+}
+
+.ms-time {
+font-size: 6.5pt;
+color: var(–mid);
+font-weight: 500;
+}
+
+.ms-kg {
+font-family: ‘Barlow Condensed’, sans-serif;
+font-weight: 700;
+font-size: 9.5pt;
+}
+
+.ms-note {
+font-size: 6pt;
+color: var(–mid);
+}
+
+/* ── ALERTS ── */
+.alert-strip {
+display: flex;
+gap: 6px;
+margin-top: 6px;
+}
+
+.alert {
+flex: 1;
+border: 1.5px solid var(–black);
+border-left: 4px solid var(–amber);
+padding: 4px 6px;
+}
+
+.alert.critical { border-left-color: var(–red); }
+.alert.positive { border-left-color: var(–green); }
+
+.alert-head {
+font-family: ‘Barlow Condensed’, sans-serif;
+font-weight: 700;
+font-size: 7.5pt;
+text-transform: uppercase;
+letter-spacing: 0.5px;
+margin-bottom: 1px;
+}
+
+.alert p {
+font-size: 6.5pt;
+color: var(–mid);
+line-height: 1.3;
+}
+
+/* ── CARDIO BLOCK ── */
+.cardio-row {
+display: grid;
+grid-template-columns: 26px 1fr 28px;
+border-bottom: 1px solid var(–rule);
+padding: 2px 0;
+gap: 4px;
+align-items: baseline;
+}
+
+.cardio-day {
+font-family: ‘Barlow Condensed’, sans-serif;
+font-weight: 900;
+font-size: 9pt;
+color: var(–blue);
+}
+
+.cardio-detail { font-size: 6.5pt; }
+
+.cardio-dur {
+font-family: ‘Barlow Condensed’, sans-serif;
+font-weight: 700;
+font-size: 9pt;
+text-align: right;
+}
+
+/* ── SHOPPING ── */
+.shop-cols {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 3px 10px;
+}
+
+.shop-item {
+display: flex;
+justify-content: space-between;
+border-bottom: 1px dotted var(–rule);
+padding: 1px 0;
+font-size: 6.5pt;
+}
+
+.shop-item .qty {
+font-family: ‘Barlow Condensed’, sans-serif;
+font-weight: 700;
+font-size: 7.5pt;
+}
+
+/* ── FOOTER ── */
+.footer {
+margin-top: 6px;
+border-top: 2px solid var(–black);
+padding-top: 4px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.footer-motto {
+font-family: ‘Barlow Condensed’, sans-serif;
+font-weight: 900;
+font-size: 11pt;
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+
+.footer-motto span { color: var(–red); }
+
+.footer-note {
+font-size: 6pt;
+color: var(–mid);
+text-align: right;
+}
+
+/* Print */
+@media print {
+body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+</style>
+
+</head>
+<body>
+
+<!-- HEADER -->
+
+<div class="header">
+  <div class="header-left">
+    <h1>Maximum <span>Acceleration</span></h1>
+    <div class="sub">Weight Loss Plan — Metric Edition</div>
+  </div>
+  <div class="header-right">
+    <span class="stat-pill red">104.3 → 77.1 kg</span>
+    <span class="stat-pill blue">2,100 kcal/day</span>
+    <span class="stat-pill green">8–10 Months</span>
+    <span class="stat-pill">195g+ Protein</span>
+  </div>
+</div>
+
+<!-- ROW 1: Numbers + Meals + Workout -->
+
+<div class="grid" style="margin-bottom:6px;">
+
+  <!-- YOUR NUMBERS -->
+
+  <div class="card">
+    <div class="card-title red">Your Numbers</div>
+    <div class="nums">
+      <div class="num-row">
+        <span class="num-label">Start Weight</span>
+        <span class="num-val">104.3 kg</span>
+      </div>
+      <div class="num-row">
+        <span class="num-label">Goal Weight</span>
+        <span class="num-val accent">77.1 kg</span>
+      </div>
+      <div class="num-row">
+        <span class="num-label">Total to Lose</span>
+        <span class="num-val">27.2 kg</span>
+      </div>
+      <div class="num-row">
+        <span class="num-label">Age / Height</span>
+        <span class="num-val">25 · 174 cm</span>
+      </div>
+      <div class="num-row">
+        <span class="num-label">Daily Calories</span>
+        <span class="num-val accent">2,100 kcal</span>
+      </div>
+      <div class="num-row">
+        <span class="num-label">Daily Protein</span>
+        <span class="num-val accent">195–205g</span>
+      </div>
+      <div class="num-row">
+        <span class="num-label">Daily Carbs</span>
+        <span class="num-val">195g</span>
+      </div>
+      <div class="num-row">
+        <span class="num-label">Daily Fat</span>
+        <span class="num-val">58g</span>
+      </div>
+      <div class="num-row">
+        <span class="num-label">Loss Rate</span>
+        <span class="num-val">0.7–0.8 kg/wk</span>
+      </div>
+      <div class="num-row">
+        <span class="num-label">Weekly Deficit</span>
+        <span class="num-val">~6,500 kcal</span>
+      </div>
+    </div>
+    <div style="margin-top:5px; font-size:6pt; color:var(--mid); border-top:1px solid var(--rule); padding-top:3px;">
+      ⚠ Recalculate TDEE at every 7 kg lost: 97.5 · 90.7 · 84 · 77.1 kg
+    </div>
+  </div>
+
+  <!-- DAILY MEALS -->
+
+  <div class="card col-span-2">
+    <div class="card-title green">Daily Meal Plan — All 7 Days (Option A: Buckwheat)</div>
+    <div class="meal-row" style="border-bottom:1.5px solid var(--black); padding-bottom:3px; margin-bottom:1px;">
+      <span class="meal-time" style="font-size:6.5pt;color:var(--mid);">TIME</span>
+      <span class="meal-name" style="font-size:6.5pt;color:var(--mid);">MEAL</span>
+      <span class="meal-kcal" style="font-size:6.5pt;color:var(--mid);">KCAL / PROTEIN</span>
+    </div>
+    <div class="meal-row">
+      <span class="meal-time">4:30 AM</span>
+      <div><span class="meal-name">Black Coffee</span><br><span class="meal-detail">240ml — no milk, no sugar</span></div>
+      <span class="meal-kcal">0 / 0g</span>
+    </div>
+    <div class="meal-row">
+      <span class="meal-time">6:00 AM</span>
+      <div><span class="meal-name">Scrambled Eggs + Oats + PB</span><br><span class="meal-detail">250g whole eggs · 30g rolled oats dry · 16g peanut butter</span></div>
+      <span class="meal-kcal">~569 / 38g</span>
+    </div>
+    <div class="meal-row">
+      <span class="meal-time">9:30 AM</span>
+      <div><span class="meal-name">Greek Yogurt + Blueberries</span><br><span class="meal-detail">245g plain non-fat Greek yogurt · 37g blueberries</span></div>
+      <span class="meal-kcal">~161 / 17g</span>
+    </div>
+    <div class="meal-row">
+      <span class="meal-time">12:00 PM</span>
+      <div><span class="meal-name">Chicken + Buckwheat + Greens</span><br><span class="meal-detail">170g chicken breast · 140g buckwheat cooked · 90g broccoli + 120g zucchini + 90g spinach</span></div>
+      <span class="meal-kcal">~460 / 67g</span>
+    </div>
+    <div class="meal-row">
+      <span class="meal-time">4:00 PM</span>
+      <div><span class="meal-name">Banana + Whey <span style="color:var(--amber);font-size:6pt;">MON/WED/THU ONLY</span></span><br><span class="meal-detail">120g banana · 30g whey isolate in 250ml water</span></div>
+      <span class="meal-kcal">~225 / 26g</span>
+    </div>
+    <div class="meal-row">
+      <span class="meal-time">7:00 PM</span>
+      <div><span class="meal-name">Turkey + Black Beans + Buckwheat</span><br><span class="meal-detail">142g ground turkey 93% lean · 130g black beans drained · 65g buckwheat cooked · 30ml salsa</span></div>
+      <span class="meal-kcal">~397 / 48g</span>
+    </div>
+    <div class="meal-row">
+      <span class="meal-time">9:00 PM</span>
+      <div><span class="meal-name">Cottage Cheese + Magnesium</span><br><span class="meal-detail">226g cottage cheese 4% fat · 400mg magnesium glycinate</span></div>
+      <span class="meal-kcal">~220 / 22g</span>
+    </div>
+    <div class="meal-row" style="border-bottom:none; background:#f0ede6; margin: 3px -7px -5px; padding: 3px 7px;">
+      <span class="meal-time" style="color:var(--green);">TOTAL</span>
+      <span class="meal-name">With PM snack (Mon/Wed/Thu) &nbsp;|&nbsp; <span style="font-weight:400;color:var(--mid);">Without PM snack (Tue/Fri/Sat/Sun)</span></span>
+      <span class="meal-kcal" style="color:var(--green);">~2,032 / 218g<br><span style="font-size:7pt;color:var(--mid);">~1,807 / 192g</span></span>
+    </div>
+  </div>
+</div>
+
+<!-- ROW 2: Workout + Cardio + Milestones -->
+
+<div class="grid" style="margin-bottom:6px;">
+
+  <!-- WORKOUT SCHEDULE -->
+
+  <div class="card">
+    <div class="card-title blue">Weekly Workout</div>
+    <div class="day-row" style="margin-bottom:1px;">
+      <span style="font-size:6pt;color:var(--mid);">DAY</span>
+      <span style="font-size:6pt;color:var(--mid);">5:15 AM LIFT</span>
+      <span style="font-size:6pt;color:var(--mid);">4:30 PM SESSION</span>
+    </div>
+    <div class="day-row">
+      <span class="day-name">MON</span>
+      <span class="day-am">Push Day 1 — Chest</span>
+      <span class="day-pm">LISS 35 min</span>
+    </div>
+    <div class="day-row">
+      <span class="day-name">TUE</span>
+      <span class="day-am">Pull Day 1 — Back</span>
+      <span class="day-pm">Recovery Walk 25 min</span>
+    </div>
+    <div class="day-row">
+      <span class="day-name">WED</span>
+      <span class="day-am">Leg Day — Full Lower</span>
+      <span class="day-pm">HIIT 20 min</span>
+    </div>
+    <div class="day-row">
+      <span class="day-name">THU</span>
+      <span class="day-am">Push Day 2 — Shoulders</span>
+      <span class="day-pm">LISS 35 min</span>
+    </div>
+    <div class="day-row">
+      <span class="day-name">FRI</span>
+      <span class="day-am">Pull Day 2 + Arms</span>
+      <span class="day-pm">Core Circuit 20 min</span>
+    </div>
+    <div class="day-row">
+      <span class="day-name">SAT</span>
+      <span class="day-am">Arms & Shoulders</span>
+      <span class="day-pm">LISS 30 min</span>
+    </div>
+    <div class="day-row" style="border-bottom:none;">
+      <span class="day-name" style="color:var(--mid);">SUN</span>
+      <span class="day-am" style="color:var(--mid);">Rest — no lifting</span>
+      <span class="day-pm">Fasted walk 20 min</span>
+    </div>
+    <div style="margin-top:4px;font-size:6pt;color:var(--mid);border-top:1px solid var(--rule);padding-top:3px;">
+      📅 Deload weeks (60% weight, easy cardio): Week 9 · 17 · 25 · 33
+    </div>
+  </div>
+
+  <!-- FASTED CARDIO -->
+
+  <div class="card">
+    <div class="card-title blue">Fasted Cardio — 4:30 AM</div>
+    <div style="font-size:6.5pt;color:var(--mid);margin-bottom:4px;border-bottom:1px solid var(--rule);padding-bottom:3px;">
+      <strong style="color:var(--black);">Rules:</strong> Black coffee only. Heart rate 120–135 bpm. Fat is primary fuel at this intensity. If HR &gt; 140, slow down.
+    </div>
+    <div class="cardio-row" style="margin-bottom:1px;">
+      <span style="font-size:6pt;color:var(--mid);">DAY</span>
+      <span style="font-size:6pt;color:var(--mid);">MACHINE / TYPE</span>
+      <span style="font-size:6pt;color:var(--mid);">MIN</span>
+    </div>
+    <div class="cardio-row">
+      <span class="cardio-day">MON</span>
+      <span class="cardio-detail">Incline treadmill 10% grade, 5 km/h</span>
+      <span class="cardio-dur">15</span>
+    </div>
+    <div class="cardio-row">
+      <span class="cardio-day">TUE</span>
+      <span class="cardio-detail">Elliptical — light resistance</span>
+      <span class="cardio-dur">15</span>
+    </div>
+    <div class="cardio-row">
+      <span class="cardio-day">WED</span>
+      <span class="cardio-detail">Recumbent bike easy — low leg stress (leg day)</span>
+      <span class="cardio-dur">20</span>
+    </div>
+    <div class="cardio-row">
+      <span class="cardio-day">THU</span>
+      <span class="cardio-detail">Incline treadmill 10% grade, 5 km/h</span>
+      <span class="cardio-dur">15</span>
+    </div>
+    <div class="cardio-row">
+      <span class="cardio-day">FRI</span>
+      <span class="cardio-detail">Elliptical or stair climber</span>
+      <span class="cardio-dur">15</span>
+    </div>
+    <div class="cardio-row">
+      <span class="cardio-day">SAT</span>
+      <span class="cardio-detail">Incline treadmill walk</span>
+      <span class="cardio-dur">15</span>
+    </div>
+    <div class="cardio-row" style="border-bottom:none;">
+      <span class="cardio-day" style="color:var(--mid);">SUN</span>
+      <span class="cardio-detail">Outdoor walk — easy pace only</span>
+      <span class="cardio-dur">20</span>
+    </div>
+    <div style="margin-top:4px;background:#eaf4ee;padding:3px 5px;border-left:3px solid var(--green);font-size:6pt;color:var(--mid);">
+      Weekly fasted cardio burns ~1,050–1,400 kcal = extra <strong>0.14–0.18 kg fat/week</strong>
+    </div>
+  </div>
+
+  <!-- MILESTONES -->
+
+  <div class="card">
+    <div class="card-title amber">Milestone Timeline</div>
+    <div class="ms-row" style="margin-bottom:1px;">
+      <span style="font-size:6pt;color:var(--mid);">PERIOD</span>
+      <span style="font-size:6pt;color:var(--mid);">TARGET</span>
+      <span style="font-size:6pt;color:var(--mid);">ACTION</span>
+    </div>
+    <div class="ms-row">
+      <span class="ms-time">Wks 1–2</span>
+      <span class="ms-kg">103–104 kg</span>
+      <span class="ms-note">Hardest. Build habits. Push through.</span>
+    </div>
+    <div class="ms-row">
+      <span class="ms-time">Wks 3–4</span>
+      <span class="ms-kg">~102 kg</span>
+      <span class="ms-note">Hunger stabilises. Verify 195g protein.</span>
+    </div>
+    <div class="ms-row">
+      <span class="ms-time">Month 2</span>
+      <span class="ms-kg">~99 kg</span>
+      <span class="ms-note">Visible early fat loss. Lifts increasing.</span>
+    </div>
+    <div class="ms-row">
+      <span class="ms-time">Month 3</span>
+      <span class="ms-kg">~95 kg</span>
+      <span class="ms-note">⚠ Recalculate TDEE at 97.5 kg</span>
+    </div>
+    <div class="ms-row">
+      <span class="ms-time">Month 4</span>
+      <span class="ms-kg">~92 kg</span>
+      <span class="ms-note">Approaching 90 kg — big milestone.</span>
+    </div>
+    <div class="ms-row">
+      <span class="ms-time">Month 5</span>
+      <span class="ms-kg">~89 kg</span>
+      <span class="ms-note">⚠ Under 90 kg. Recalculate at 90.7 kg.</span>
+    </div>
+    <div class="ms-row">
+      <span class="ms-time">Month 6–7</span>
+      <span class="ms-kg">~83 kg</span>
+      <span class="ms-note">⚠ Recalc at 84 kg. Refeed every 10–14 days.</span>
+    </div>
+    <div class="ms-row">
+      <span class="ms-time">Month 8</span>
+      <span class="ms-kg">~79 kg</span>
+      <span class="ms-note">Final push. Recalculate one more time.</span>
+    </div>
+    <div class="ms-row" style="border-bottom:none;background:#eaf4ee;">
+      <span class="ms-time" style="color:var(--green);font-weight:700;">Month 8–10</span>
+      <span class="ms-kg" style="color:var(--green);">77.1 kg ✓</span>
+      <span class="ms-note">+200 kcal/wk until weight stabilises.</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- ROW 3: Rules + Supplements + Shopping -->
+
+<div class="grid" style="margin-bottom:6px;">
+
+  <!-- 7 RULES -->
+
+  <div class="card">
+    <div class="card-title red">7 Non-Negotiable Rules</div>
+    <div class="rules-list">
+      <div class="rule-item">
+        <div class="rule-num">1</div>
+        <div class="rule-text">
+          <strong>Sleep 7.5–9 hours. In bed by 9:30 PM.</strong>
+          <span>Under 6.5 hrs: ghrelin +30%, muscle synthesis −18%, fat loss stalls.</span>
+        </div>
+      </div>
+      <div class="rule-item">
+        <div class="rule-num">2</div>
+        <div class="rule-text">
+          <strong>Hit 195g protein every single day.</strong>
+          <span>At 1,000 kcal deficit, muscle vs fat loss hinges entirely on protein. Weigh portions.</span>
+        </div>
+      </div>
+      <div class="rule-item">
+        <div class="rule-num">3</div>
+        <div class="rule-text">
+          <strong>Fasted cardio — no negotiating at 4:30 AM.</strong>
+          <span>Alarm goes off. You move. That is the only decision.</span>
+        </div>
+      </div>
+      <div class="rule-item">
+        <div class="rule-num">4</div>
+        <div class="rule-text">
+          <strong>Weigh everything. Log oils and condiments.</strong>
+          <span>Unweighed portions add 200–400 kcal/day — enough to erase your deficit.</span>
+        </div>
+      </div>
+      <div class="rule-item">
+        <div class="rule-num">5</div>
+        <div class="rule-text">
+          <strong>Never skip Sunday meal prep (65 min).</strong>
+          <span>One session eliminates 21 decision points per week. Highest ROI action in the plan.</span>
+        </div>
+      </div>
+      <div class="rule-item">
+        <div class="rule-num">6</div>
+        <div class="rule-text">
+          <strong>Take deload weeks on schedule — Wks 9·17·25·33.</strong>
+          <span>Skipping causes overtraining injuries. One deload costs zero. An injury costs 4–8 weeks.</span>
+        </div>
+      </div>
+      <div class="rule-item" style="border-bottom:none;">
+        <div class="rule-num">7</div>
+        <div class="rule-text">
+          <strong>Recalculate calories at every 7 kg lost.</strong>
+          <span>Body at 84 kg burns ~150 kcal/day less than at 104.3 kg. Recalculate or plateau.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUPPLEMENTS -->
+
+  <div class="card">
+    <div class="card-title">Supplement Stack</div>
+    <div style="display:flex;flex-direction:column;gap:3px;">
+      <div style="display:grid;grid-template-columns:90px 1fr 1fr;gap:4px;border-bottom:1.5px solid var(--black);padding-bottom:2px;margin-bottom:1px;">
+        <span style="font-size:6pt;color:var(--mid);">SUPPLEMENT</span>
+        <span style="font-size:6pt;color:var(--mid);">DOSE</span>
+        <span style="font-size:6pt;color:var(--mid);">WHEN</span>
+      </div>
+      <div style="display:grid;grid-template-columns:90px 1fr 1fr;gap:4px;border-bottom:1px solid var(--rule);padding-bottom:2px;align-items:baseline;">
+        <span style="font-size:7pt;font-weight:600;">Whey Isolate</span>
+        <span style="font-size:6.5pt;">30–60g powder</span>
+        <span style="font-size:6.5pt;color:var(--mid);">Post-lift / pre-PM cardio</span>
+      </div>
+      <div style="display:grid;grid-template-columns:90px 1fr 1fr;gap:4px;border-bottom:1px solid var(--rule);padding-bottom:2px;align-items:baseline;">
+        <span style="font-size:7pt;font-weight:600;">Creatine Mono</span>
+        <span style="font-size:6.5pt;">5g powder</span>
+        <span style="font-size:6.5pt;color:var(--mid);">Any time — consistent daily</span>
+      </div>
+      <div style="display:grid;grid-template-columns:90px 1fr 1fr;gap:4px;border-bottom:1px solid var(--rule);padding-bottom:2px;align-items:baseline;">
+        <span style="font-size:7pt;font-weight:600;">Vitamin D3 + K2</span>
+        <span style="font-size:6.5pt;">3,000–5,000 IU + 100mcg</span>
+        <span style="font-size:6.5pt;color:var(--mid);">Morning with breakfast</span>
+      </div>
+      <div style="display:grid;grid-template-columns:90px 1fr 1fr;gap:4px;border-bottom:1px solid var(--rule);padding-bottom:2px;align-items:baseline;">
+        <span style="font-size:7pt;font-weight:600;">Omega-3 Fish Oil</span>
+        <span style="font-size:6.5pt;">2–3g EPA+DHA</span>
+        <span style="font-size:6.5pt;color:var(--mid);">With lunch or dinner</span>
+      </div>
+      <div style="display:grid;grid-template-columns:90px 1fr 1fr;gap:4px;border-bottom:1px solid var(--rule);padding-bottom:2px;align-items:baseline;">
+        <span style="font-size:7pt;font-weight:600;">Magnesium Glycinate</span>
+        <span style="font-size:6.5pt;">400mg</span>
+        <span style="font-size:6.5pt;color:var(--mid);">30–45 min before bed</span>
+      </div>
+      <div style="display:grid;grid-template-columns:90px 1fr 1fr;gap:4px;border-bottom:1px solid var(--rule);padding-bottom:2px;align-items:baseline;">
+        <span style="font-size:7pt;font-weight:600;">Multivitamin</span>
+        <span style="font-size:6.5pt;">1 tablet</span>
+        <span style="font-size:6.5pt;color:var(--mid);">Morning with breakfast</span>
+      </div>
+      <div style="display:grid;grid-template-columns:90px 1fr 1fr;gap:4px;border-bottom:1px solid var(--rule);padding-bottom:2px;align-items:baseline;">
+        <span style="font-size:7pt;font-weight:600;">Black Coffee</span>
+        <span style="font-size:6.5pt;">240ml (~150–200mg caffeine)</span>
+        <span style="font-size:6.5pt;color:var(--mid);">4:30 AM pre-cardio</span>
+      </div>
+      <div style="display:grid;grid-template-columns:90px 1fr 1fr;gap:4px;align-items:baseline;">
+        <span style="font-size:7pt;font-weight:600;">Beta-Alanine <span style="font-weight:400;color:var(--mid);">(opt)</span></span>
+        <span style="font-size:6.5pt;">3.2g</span>
+        <span style="font-size:6.5pt;color:var(--mid);">Pre-AM workout</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SHOPPING LIST -->
+
+  <div class="card">
+    <div class="card-title">Weekly Shopping</div>
+    <div class="shop-cols">
+      <div>
+        <div style="font-size:6pt;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--mid);margin-bottom:2px;">Proteins</div>
+        <div class="shop-item"><span>Chicken breast</span><span class="qty">~1,200g</span></div>
+        <div class="shop-item"><span>Ground turkey 93%</span><span class="qty">~1,000g</span></div>
+        <div class="shop-item"><span>Eggs large</span><span class="qty">35 count</span></div>
+        <div class="shop-item"><span>Greek yogurt non-fat</span><span class="qty">~1,715g</span></div>
+        <div class="shop-item"><span>Cottage cheese 4%</span><span class="qty">~1,582g</span></div>
+        <div class="shop-item"><span>Whey protein isolate</span><span class="qty">~120–240g</span></div>
+        <div style="font-size:6pt;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--mid);margin:4px 0 2px;">Carbs</div>
+        <div class="shop-item"><span>Buckwheat groats (A)</span><span class="qty">~700g dry</span></div>
+        <div class="shop-item"><span>Sweet potato (B)</span><span class="qty">~1,610g</span></div>
+        <div class="shop-item"><span>Rolled oats old-fash.</span><span class="qty">~210g</span></div>
+        <div class="shop-item"><span>Black beans canned</span><span class="qty">4 × 400g</span></div>
+        <div class="shop-item"><span>Bananas</span><span class="qty">~360g (3)</span></div>
+      </div>
+      <div>
+        <div style="font-size:6pt;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--mid);margin-bottom:2px;">Produce</div>
+        <div class="shop-item"><span>Broccoli</span><span class="qty">~640g</span></div>
+        <div class="shop-item"><span>Zucchini</span><span class="qty">~850g</span></div>
+        <div class="shop-item"><span>Spinach fresh/frozen</span><span class="qty">~750g/250g</span></div>
+        <div class="shop-item"><span>Blueberries</span><span class="qty">~260g</span></div>
+        <div style="font-size:6pt;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--mid);margin:4px 0 2px;">Pantry</div>
+        <div class="shop-item"><span>Natural peanut butter</span><span class="qty">~115g</span></div>
+        <div class="shop-item"><span>Olive oil spray</span><span class="qty">1 can</span></div>
+        <div class="shop-item"><span>Salsa low-sugar</span><span class="qty">~210ml</span></div>
+        <div class="shop-item"><span>Plain sparkling water</span><span class="qty">6–12 × 330ml</span></div>
+        <div class="shop-item"><span>Hot sauce / mustard</span><span class="qty">on hand</span></div>
+        <div class="shop-item"><span>Spices (garlic, paprika)</span><span class="qty">on hand</span></div>
+        <div style="margin-top:4px;background:#fff3e0;padding:2px 4px;border-left:2px solid var(--amber);font-size:6pt;color:var(--mid);">
+          ⚖ Weigh everything for 3–4 wks. Unweighed = 200–400 extra kcal/day.
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ALERT STRIP -->
+
+<div class="alert-strip">
+  <div class="alert critical">
+    <div class="alert-head">😴 Sleep Rule</div>
+    <p>7.5–9 hrs non-negotiable. Under 6.5 hrs: hunger hormones spike 30%, muscle synthesis drops 18%. <strong>In bed by 9:30 PM.</strong></p>
+  </div>
+  <div class="alert">
+    <div class="alert-head">🍠 Option B: Sweet Potato</div>
+    <p>Replace buckwheat: 130g baked flesh (lunch) + 100g (dinner). Saves ~15–20 kcal/day. More Vitamin A + potassium. Everything else identical.</p>
+  </div>
+  <div class="alert positive">
+    <div class="alert-head">📈 Progressive Overload</div>
+    <p>Every 1–2 wks: add a rep, increase weight, add a set, or cut rest by 10 sec. <strong>Track every weight every session.</strong> You cannot overload what you don't measure.</p>
+  </div>
+  <div class="alert">
+    <div class="alert-head">🔄 Refeed Days (Month 6+)</div>
+    <p>Every 10–14 days: ~3,000 kcal, high carb (buckwheat, sweet potato, oats), protein 195g+. Restores leptin. This is a <strong>tool, not a cheat day.</strong></p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+
+<div class="footer">
+  <div class="footer-motto">Eight to ten months. Every morning at <span>4:30.</span></div>
+  <div class="footer-note">
+    Consult a physician before starting. All measurements in grams &amp; millilitres. Use a kitchen scale.<br>
+    The plan is complete. The only variable left is <strong>you.</strong>
+  </div>
+</div>
+
+</body>
+</html>
